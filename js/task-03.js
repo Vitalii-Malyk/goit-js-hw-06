@@ -19,16 +19,27 @@ const newImages = images.map(
 
 const list = document.querySelector(".gallery");
 const markup = newImages
-  .map((newImages) => `<li class="item"><img ${newImages}></img></li>`)
+  .map(
+    (newImages) =>
+      `<li class="item"><img class="capture" ${newImages}></img></li>`
+  )
   .join("");
 
 console.log(markup);
 list.insertAdjacentHTML("beforeend", markup);
 
 const newStylist = document.querySelector(".gallery");
+newStylist.style.listStyle = "none";
 newStylist.style.background = "#68c5dc";
 newStylist.style.display = "flex";
-newStylist.style.padding = "20px";
+newStylist.style.padding = "40px";
 newStylist.style.flexDirection = "column";
-newStylist.style.gap = "20px";
+newStylist.style.gap = "40px";
 newStylist.style.alignItems = "center";
+newStylist.style.width = "2300px";
+newStylist.style.margin = "auto";
+
+const newStyImg = document.querySelector(".capture");
+newStyImg.style.display = "block";
+newStyImg.style.margin = "auto";
+newStyImg.style.width = "2250px";
