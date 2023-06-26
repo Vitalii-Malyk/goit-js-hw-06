@@ -7,11 +7,23 @@ const ingredients = [
   "Condiments",
 ];
 
-const list = document.querySelector("#ingredients");
+const itemElementsArr = ingredients.map((data) => {
+  const itemElement = document.createElement("li");
+  itemElement.textContent = data;
+  itemElement.classList.add("item");
+  return itemElement;
+});
 
-const markup = ingredients
-  .map((ingredients) => `<li class="item">${ingredients}</li>`)
-  .join("");
+const listEl = document.querySelector("#ingredients");
 
-console.log(markup);
-list.innerHTML = markup;
+listEl.prepend(...itemElementsArr);
+
+// ------------Варіант №2----------
+// const list = document.querySelector("#ingredients");
+
+// const itemsArr = ingredients
+//   .map((ingredient) => `<li class="item">${ingredient}</li>`)
+//   .join("");
+
+// console.log(itemsArr);
+// list.insertAdjacentHTML("beforeend", itemsArr);
