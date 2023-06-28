@@ -13,19 +13,14 @@ const images = [
   },
 ];
 
-const newImages = images.map(
-  (image) => `src= ` + image.url + ` alt= ` + image.alt
-);
-
-const list = document.querySelector(".gallery");
-const markup = newImages
+const markup = images
   .map(
-    (newImages) =>
-      `<li class="item"><img class="capture" ${newImages}></img></li>`
+    ({ url, alt }) =>
+      `<li clas="item"><img class="capture" src="${url}" alt="${alt}"></li>`
   )
   .join("");
+const list = document.querySelector(".gallery");
 
-console.log(markup);
 list.insertAdjacentHTML("beforeend", markup);
 
 const newStylist = document.querySelector(".gallery");
