@@ -29,17 +29,4 @@ console.log(markup);
 list.insertAdjacentHTML("beforeend", markup);
 
 const newStylist = document.querySelector(".gallery");
-newStylist.style.listStyle = "none";
-newStylist.style.background = "#68c5dc";
-newStylist.style.display = "flex";
-newStylist.style.padding = "40px";
-newStylist.style.flexDirection = "column";
-newStylist.style.gap = "40px";
-newStylist.style.alignItems = "center";
-newStylist.style.width = "2300px";
-newStylist.style.margin = "auto";
-
-const newStyImg = document.querySelector(".capture");
-newStyImg.style.display = "block";
-newStyImg.style.margin = "auto";
-newStyImg.style.width = "2250px";
+newStylist.classList.add("new_gallery");
