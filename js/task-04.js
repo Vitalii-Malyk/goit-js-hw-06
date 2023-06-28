@@ -8,12 +8,12 @@ const incrementButton = document.querySelector(
 );
 
 const handleClickIncrement = () => {
-  counterValue.textContent += 1;
+  counterValue.textContent = Number(counterValue.textContent) + 1;
 };
 incrementButton.addEventListener("click", handleClickIncrement);
 
 const handleClickDecrement = () => {
-  counterValue.textContent -= 1;
+  counterValue.textContent = Number(counterValue.textContent) - 1;
 };
 
 decrementButton.addEventListener("click", handleClickDecrement);
