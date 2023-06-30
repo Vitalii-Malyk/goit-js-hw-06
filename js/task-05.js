@@ -1,6 +1,6 @@
 const input = document.querySelector("#name-input");
 const span = document.querySelector("#name-output");
-const spanText = (span.textContent = "Anonymous");
+const spanText = span.textContent;
 
 input.addEventListener("input", onInputChange);
 
